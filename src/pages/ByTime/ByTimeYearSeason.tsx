@@ -3,7 +3,7 @@ import { Alert, Card, Empty, message } from 'antd'
 import { useRef, useState } from 'react'
 import QueryResult from '@/components/QueryResult/QueryResult'
 import QueryLog from '@/components/QueryResult/QueryLog'
-import { queryByTimeYear } from '@/services/data-warehouse/api'
+import { queryByTimeYear, queryByTimeYearSeason } from '@/services/data-warehouse/api'
 
 export default function ByTimeQuery() {
   const formRef = useRef<
@@ -23,7 +23,7 @@ export default function ByTimeQuery() {
       message.warning('有必填字段未填')
       return
     }
-    const resp = await queryByTimeYear(data.year)
+    const resp = await queryByTimeYearSeason(data.year, data.season)
     console.log(resp)
     if (resp.success) {
       setYear(data.year)
