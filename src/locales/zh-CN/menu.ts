@@ -53,6 +53,7 @@ export default {
   'menu.time.year': '按年查询',
   'menu.time.year-month': '按年月查询',
   'menu.time.year-month-day': '按年月日查询',
+  'menu.time.year-season': '按年和季度查询',
   'menu.movie': '按电影名称查询',
   'menu.director': '按导演名称查询',
   'menu.actor': '按演员名称查询',

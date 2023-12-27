@@ -52,6 +52,11 @@ export default [
         name: 'year-month-day',
         component: './ByTime/ByTimeYearMonthDay',
       },
+      {
+        path: '/time/year-season',
+        name: 'year-season',
+        component: './ByTime/ByTimeYearSeason',
+      },
     ],
   },
   {

@@ -72,4 +72,5 @@ export default {
   'GET /api/time/year': getTimeYear,
   'GET /api/time/year-month': getTimeYearMonth,
   'GET /api/time/year-month-day': getTimeYearMonthDay,
+  'GET /api/time/year-season': getTimeYear,
 }

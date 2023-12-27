@@ -31,6 +31,16 @@ export async function queryByTimeYearMonthDay(year: number, month: number, day: 
   })
 }
 
+export async function queryByTimeYearSeason(year: number, season: string) {
+  return request<API.QueryResult<number>>('/api/time/year-season', {
+    method: 'GET',
+    params: {
+      year: year,
+      season: season,
+    },
+  })
+}
+
 export async function queryByMovieName(name: string) {
   return request<API.QueryResult<API.Movie[]>>('/api/movie', {
     method: 'GET',
