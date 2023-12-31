@@ -43,8 +43,8 @@ export default function ByCategory() {
                 <Table
                   dataSource={queryResult.data}
                   columns={[
-                    { title: '导演1', dataIndex: 'directorName1' },
-                    { title: '导演2', dataIndex: 'directorName2' },
+                    { title: '导演1', dataIndex: 'director1' },
+                    { title: '导演2', dataIndex: 'director2' },
                     { title: '合作次数', dataIndex: 'collaborationNumber' },
                   ]}
                 />

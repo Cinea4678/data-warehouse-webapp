@@ -3,7 +3,7 @@ import { Alert, Card, Empty, List, Table } from 'antd'
 import { useRef, useState } from 'react'
 import QueryResult from '@/components/QueryResult/QueryResult'
 import QueryLog from '@/components/QueryResult/QueryLog'
-import {queryCooperateByDirectorActor, queryMovieByPositiveReview} from '@/services/data-warehouse/api'
+import { queryCooperateByDirectorActor, queryMovieByPositiveReview } from '@/services/data-warehouse/api'
 
 type QueryParam = {}
 
@@ -39,8 +39,8 @@ export default function ByCategory() {
                 <Table
                   dataSource={queryResult.data}
                   columns={[
-                    { title: '导演', dataIndex: 'directorName' },
-                    { title: '演员', dataIndex: 'actorName' },
+                    { title: '导演', dataIndex: 'director' },
+                    { title: '演员', dataIndex: 'actor' },
                     { title: '合作次数', dataIndex: 'collaborationNumber' },
                   ]}
                 />

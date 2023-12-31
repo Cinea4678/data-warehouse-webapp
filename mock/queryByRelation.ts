@@ -34,9 +34,9 @@ const getAA = async (req: Request, res: Response) => {
 
   res.json({
     data: [
-      { actorName1: '演员1', collaborationNumber: 50, actorName2: '演员4' },
-      { actorName1: '演员2', collaborationNumber: 25, actorName2: '演员5' },
-      { actorName1: '演员3', collaborationNumber: 10, actorName2: '演员6' },
+      { actor1: '演员1', collaborationNumber: 50, actor2: '演员4' },
+      { actor1: '演员2', collaborationNumber: 25, actor2: '演员5' },
+      { actor1: '演员3', collaborationNumber: 10, actor2: '演员6' },
     ],
     id: '1',
     success: true,
@@ -53,9 +53,9 @@ const getDD = async (req: Request, res: Response) => {
 
   res.json({
     data: [
-      { directorName1: '导演4', collaborationNumber: 50, directorName2: '导演1' },
-      { directorName1: '导演5', collaborationNumber: 25, directorName2: '导演2' },
-      { directorName1: '导演6', collaborationNumber: 10, directorName2: '导演3' },
+      { director1: '导演4', collaborationNumber: 50, director2: '导演1' },
+      { director1: '导演5', collaborationNumber: 25, director2: '导演2' },
+      { director1: '导演6', collaborationNumber: 10, director2: '导演3' },
     ],
     id: '1',
     success: true,
@@ -72,9 +72,9 @@ const getHotAA = async (req: Request, res: Response) => {
 
   res.json({
     data: [
-      { actorName1: '演员1', actorName2: '演员4' },
-      { actorName1: '演员2', actorName2: '演员5' },
-      { actorName1: '演员3', actorName2: '演员6' },
+      { actor1: '演员1', actor2: '演员4' },
+      { actor1: '演员2', actor2: '演员5' },
+      { actor1: '演员3', actor2: '演员6' },
     ],
     id: '1',
     success: true,

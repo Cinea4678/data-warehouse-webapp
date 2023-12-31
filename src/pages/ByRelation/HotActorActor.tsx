@@ -44,8 +44,8 @@ export default function ByCategory() {
                 <Table
                   dataSource={queryResult.data}
                   columns={[
-                    { title: '演员1', dataIndex: 'actorName1' },
-                    { title: '演员2', dataIndex: 'actorName2' },
+                    { title: '演员1', dataIndex: 'actor1' },
+                    { title: '演员2', dataIndex: 'actor2' },
                   ]}
                 />
               </div>

@@ -1,52 +1,74 @@
-import Footer from '@/components/Footer';
-import { Question, SelectLang } from '@/components/RightContent';
-import { LinkOutlined } from '@ant-design/icons';
-import type { Settings as LayoutSettings } from '@ant-design/pro-components';
-import { SettingDrawer } from '@ant-design/pro-components';
-import type { RunTimeLayoutConfig } from '@umijs/max';
-import { history, Link } from '@umijs/max';
-import defaultSettings from '../config/defaultSettings';
-import { errorConfig } from './requestErrorConfig';
-import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
-import React from 'react';
-import { AvatarDropdown, AvatarName } from './components/RightContent/AvatarDropdown';
-const isDev = process.env.NODE_ENV === 'development';
-const loginPath = '/user/login';
+import Footer from '@/components/Footer'
+import { Question, SelectLang } from '@/components/RightContent'
+import { LinkOutlined } from '@ant-design/icons'
+import type { Settings as LayoutSettings } from '@ant-design/pro-components'
+import { SettingDrawer } from '@ant-design/pro-components'
+import type { RunTimeLayoutConfig } from '@umijs/max'
+import { history, Link } from '@umijs/max'
+import defaultSettings from '../config/defaultSettings'
+import { errorConfig } from './requestErrorConfig'
+import { currentUser as queryCurrentUser } from './services/ant-design-pro/api'
+import React from 'react'
+import { AvatarDropdown, AvatarName } from './components/RightContent/AvatarDropdown'
+const isDev = process.env.NODE_ENV === 'development'
+const loginPath = '/user/login'
 
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
  * */
 export async function getInitialState(): Promise<{
-  settings?: Partial<LayoutSettings>;
-  currentUser?: API.CurrentUser;
-  loading?: boolean;
-  fetchUserInfo?: () => Promise<API.CurrentUser | undefined>;
+  settings?: Partial<LayoutSettings>
+  currentUser?: API.CurrentUser
+  loading?: boolean
+  fetchUserInfo?: () => Promise<API.CurrentUser | undefined>
 }> {
   const fetchUserInfo = async () => {
-    try {
-      const msg = await queryCurrentUser({
-        skipErrorHandler: true,
-      });
-      return msg.data;
-    } catch (error) {
-      history.push(loginPath);
+    return {
+      name: 'Serati Ma',
+      avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+      userid: '00000001',
+      email: 'antdesign@alipay.com',
+      signature: '海纳百川，有容乃大',
+      title: '交互专家',
+      group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+      tags: [
+        {
+          key: '0',
+          label: '很有想法的',
+        },
+      ],
+      notifyCount: 12,
+      unreadCount: 11,
+      country: 'China',
+      access: 'admin',
+      geographic: {
+        province: {
+          label: '浙江省',
+          key: '330000',
+        },
+        city: {
+          label: '杭州市',
+          key: '330100',
+        },
+      },
+      address: '西湖区工专路 77 号',
+      phone: '0752-268888888',
     }
-    return undefined;
-  };
+  }
   // 如果不是登录页面，执行
-  const { location } = history;
+  const { location } = history
   if (location.pathname !== loginPath) {
-    const currentUser = await fetchUserInfo();
+    const currentUser = await fetchUserInfo()
     return {
       fetchUserInfo,
       currentUser,
       settings: defaultSettings as Partial<LayoutSettings>,
-    };
+    }
   }
   return {
     fetchUserInfo,
     settings: defaultSettings as Partial<LayoutSettings>,
-  };
+  }
 }
 
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
@@ -57,18 +79,18 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       src: initialState?.currentUser?.avatar,
       title: <AvatarName />,
       render: (_, avatarChildren) => {
-        return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
+        return <AvatarDropdown>{avatarChildren}</AvatarDropdown>
       },
     },
     waterMarkProps: {
-      content: "",
+      content: '',
     },
     footerRender: () => <Footer />,
     onPageChange: () => {
-      const { location } = history;
+      const { location } = history
       // 如果没有登录，重定向到 login
       if (!initialState?.currentUser && location.pathname !== loginPath) {
-        history.push(loginPath);
+        history.push(loginPath)
       }
     },
     layoutBgImgList: [
@@ -116,15 +138,15 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
               setInitialState((preInitialState) => ({
                 ...preInitialState,
                 settings,
-              }));
+              }))
             }}
           />
         </>
-      );
+      )
     },
     ...initialState?.settings,
-  };
-};
+  }
+}
 
 /**
  * @name request 配置，可以配置错误处理
@@ -133,4 +155,4 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
  */
 export const request = {
   ...errorConfig,
-};
+}

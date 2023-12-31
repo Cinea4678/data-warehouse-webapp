@@ -24,7 +24,6 @@ export default function ByTimeQuery() {
       return
     }
     const resp = await queryByTimeYearSeason(data.year, data.season)
-    console.log(resp)
     if (resp.success) {
       setYear(data.year)
       setSeason(data.season)

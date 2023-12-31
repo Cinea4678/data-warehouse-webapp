@@ -23,20 +23,20 @@ declare namespace API {
   }
 
   type DDCooperate = {
-    directorName1: string
-    directorName2: string
+    director1: string
+    director2: string
     collaborationNumber: number
   }
 
   type AACooperate = {
-    actorName1: string
-    actorName2: string
+    actor1: string
+    actor2: string
     collaborationNumber: number
   }
 
   type HotAA = {
-    actorName1: string
-    actorName2: string
+    actor1: string
+    actor2: string
   }
 
   type NonMovie = {

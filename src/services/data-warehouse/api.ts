@@ -45,7 +45,7 @@ export async function queryByMovieName(name: string) {
   return request<API.QueryResult<API.Movie[]>>('/api/movie', {
     method: 'GET',
     params: {
-      name: name,
+      movieName: name,
     },
   })
 }
@@ -54,7 +54,7 @@ export async function queryByDirectorName(name: string) {
   return request<API.QueryResult<string[]>>('/api/director', {
     method: 'GET',
     params: {
-      director_name: name,
+      directorName: name,
     },
   })
 }
@@ -63,7 +63,7 @@ export async function queryByActorName(name: string) {
   return request<API.QueryResult<string[]>>('/api/actor', {
     method: 'GET',
     params: {
-      actor_name: name,
+      actorName: name,
     },
   })
 }
@@ -72,7 +72,7 @@ export async function queryActorByDirector(name: string) {
   return request<API.QueryResult<string[]>>('/api/director-actor/actor-by-director', {
     method: 'GET',
     params: {
-      director_name: name,
+      directorName: name,
     },
   })
 }
@@ -81,7 +81,7 @@ export async function queryDirectorByDirector(name: string) {
   return request<API.QueryResult<string[]>>('/api/director-actor/director-by-director', {
     method: 'GET',
     params: {
-      director_name: name,
+      directorName: name,
     },
   })
 }
@@ -90,7 +90,7 @@ export async function queryDirectorByActor(name: string) {
   return request<API.QueryResult<string[]>>('/api/director-actor/director-by-actor', {
     method: 'GET',
     params: {
-      actor_name: name,
+      actorName: name,
     },
   })
 }
@@ -99,7 +99,7 @@ export async function queryActorByActor(name: string) {
   return request<API.QueryResult<string[]>>('/api/director-actor/actor-by-actor', {
     method: 'GET',
     params: {
-      actor_name: name,
+      actorName: name,
     },
   })
 }
@@ -154,7 +154,7 @@ export async function queryByHotActorActor(category: string) {
   return request<API.QueryResult<API.HotAA[]>>('/api/relation/hot-actor-actor', {
     method: 'GET',
     params: {
-      category: category,
+      type: category,
     },
   })
 }
