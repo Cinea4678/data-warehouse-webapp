@@ -189,6 +189,12 @@ export default [
     ],
   },
   {
+    name: 'quality',
+    icon: 'checkCircle',
+    path: '/quality',
+    component: './Quality',
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },

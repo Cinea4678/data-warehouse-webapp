@@ -77,4 +77,5 @@ export default {
   'menu.trace': '溯源查询',
   'menu.trace.non-movie': '非电影',
   'menu.trace.harry-potter': '哈利波特',
+  'menu.quality': '数据质量',
 }

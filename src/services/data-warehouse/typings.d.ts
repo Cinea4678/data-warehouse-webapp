@@ -49,4 +49,21 @@ declare namespace API {
     webPageCount: number
     mergedWebPageCount: number
   }
+
+  type QualityData = {
+    costNullRate: number
+    totalMovies: number
+    costNulls: number
+    commentsNullRate: number
+    formatNullRate: number
+    typeNullRate: number
+    commentsNulls: number
+    formatNulls: number
+    totalProducts: number
+    gradeNulls: number
+    typeNulls: number
+    gradeNullRate: number
+    timeNullRate: number
+    timeNulls: number
+  }
 }

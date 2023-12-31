@@ -192,3 +192,10 @@ export async function queryHarryPotter() {
     params: {},
   })
 }
+
+export async function queryQuality() {
+  return request<API.QueryResult<API.QualityData>>('/api/quality', {
+    method: 'GET',
+    params: {},
+  })
+}
