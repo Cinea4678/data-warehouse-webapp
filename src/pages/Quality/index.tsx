@@ -51,7 +51,7 @@ export default function Quality() {
                     <Statistic title="价格空值数量" value={queryResult.data.costNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="价格空值占比" value={queryResult.data.costNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="价格空值占比" value={queryResult.data.costNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
                 <Row>
@@ -59,7 +59,7 @@ export default function Quality() {
                     <Statistic title="评价数量属性空值个数" value={queryResult.data.commentsNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="评论数量属性空值占比" value={queryResult.data.commentsNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="评论数量属性空值占比" value={queryResult.data.commentsNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
                 <Row>
@@ -67,7 +67,7 @@ export default function Quality() {
                     <Statistic title="版本属性空值个数" value={queryResult.data.formatNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="版本属性空值占比" value={queryResult.data.formatNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="版本属性空值占比" value={queryResult.data.formatNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
                 <Row>
@@ -75,7 +75,7 @@ export default function Quality() {
                     <Statistic title="类型属性空值个数" value={queryResult.data.typeNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="类型属性空值占比" value={queryResult.data.typeNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="类型属性空值占比" value={queryResult.data.typeNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
                 <Row>
@@ -83,7 +83,7 @@ export default function Quality() {
                     <Statistic title="评分属性空值个数" value={queryResult.data.gradeNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="评分属性空值占比" value={queryResult.data.gradeNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="评分属性空值占比" value={queryResult.data.gradeNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
                 <Row>
@@ -91,7 +91,7 @@ export default function Quality() {
                     <Statistic title="时长属性空值个数" value={queryResult.data.timeNulls} />
                   </Col>
                   <Col span={12}>
-                    <Statistic title="时长属性空值占比" value={queryResult.data.timeNullRate.toFixed(4)} prefix={'%'} />
+                    <Statistic title="时长属性空值占比" value={queryResult.data.timeNullRate.toFixed(4)} suffix={'%'} />
                   </Col>
                 </Row>
               </div>
